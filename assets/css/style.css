@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Cafe -  Coffee Shop and Bakery Template
+    Template Name: Cafe -  service Shop and Bakery Template
     Author: UIdeck
     Version: 1.0
 
@@ -829,17 +829,20 @@ p {
       border-color: #E54E1B; }
 
 /*===========================
-    03.COFFEE css 
+    03.service css 
 ===========================*/
-.single_coffee .coffee_image img {
-  border-radius: 50%; }
+.single_service .service_image img {
+  border-radius: 50%; 
+  height: 150px;
+  width: 150px;
+}
 
-.single_coffee .coffee_content {
+.single_service .service_content {
   margin-top: 25px; }
-  .single_coffee .coffee_content .coffee_title {
+  .single_service .service_content .service_title {
     font-size: 20px;
     font-weight: 700; }
-  .single_coffee .coffee_content p {
+  .single_service .service_content p {
     margin-top: 15px; }
 
 /*===========================
