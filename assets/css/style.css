@@ -1056,7 +1056,8 @@ p.form-message.success, p.form-message.error {
   bottom: 0;
   right: 0;
   opacity: 0.32;
-  z-index: -1; }
+  z-index: -1; 
+  width: 150px;}
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .footer_shape img {
       width: 271px; } }
@@ -1212,3 +1213,22 @@ p.form-message.success, p.form-message.error {
   .back-to-top:hover {
     color: #fff;
     background-color: #E54E1B; }
+
+/*===== CUSTOM STYLES =====*/
+
+.mix-department-logo {
+  width: 60px;
+  margin: auto;
+}
+
+.mix-department-logo.is-black {
+  display: none;
+}
+
+.header_navbar.sticky .mix-department-logo.is-black {
+  display: inline-block;
+}
+
+.header_navbar.sticky .mix-department-logo.is-white {
+  display: none;
+}
