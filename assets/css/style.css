@@ -1232,3 +1232,20 @@ p.form-message.success, p.form-message.error {
 .header_navbar.sticky .mix-department-logo.is-white {
   display: none;
 }
+
+#lang-switcher {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin: 23px 0;
+  position: relative;
+  background: transparent;
+}
+
+#lang-switcher option {
+  color: black;
+}
+
+.header_navbar.sticky #lang-switcher {
+  color: black;
+}

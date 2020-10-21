@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/serenalucasjose/mixdepartment#readme",
   "dependencies": {
-    "sweetalert2": "^10.7.0"
+    "sweetalert2": "^10.7.0",
+    "vavilon": "^1.1.1"
   }
 }

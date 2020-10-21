@@ -239,18 +239,10 @@ $(function() {
     }, false);
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  //===== Lang Switcher
+  var langSwitcher = document.getElementById("lang-switcher");
+  langSwitcher.addEventListener("change", () => {
+    setLang(langSwitcher.value);
+  });
     
 });

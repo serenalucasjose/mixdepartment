@@ -5,13 +5,16 @@
     <meta charset="utf-8">
     
     <!--====== Title ======-->
-    <title>MixDepartment - Mix & Mastering house</title>
+    <title>MixDepartment - Mix & Mastering houses</title>
+
+    <script src="assets/js/es.json" type="application/json" data-vavilon-dict="es"></script>
+    <script src="assets/js/en.json" type="application/json" data-vavilon-dict="en"></script>
     
     <meta name="description" content="We provide mix and mastering services for musicians all around the world">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/ico">
         
     <!--====== Animate CSS ======-->
     <link rel="stylesheet" href="assets/css/animate.css">
@@ -87,16 +90,22 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">Home</a>
+                                        <a class="page-scroll vavilon" data-vavilon="menuHome" href="#home">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#services">Services</a>
+                                        <a class="page-scroll vavilon" data-vavilon="menuServices" href="#services">Services</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#whoweare">Who We Are</a>
+                                        <a class="page-scroll vavilon" data-vavilon="menuWhoweare" href="#whoweare">Who We Are</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">Contact</a>
+                                        <a class="page-scroll vavilon" data-vavilon="menuContact" href="#contact">Contact</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <select id="lang-switcher" class="form-control">
+                                            <option value="en">English</option>
+                                            <option value="es">Español</option>
+                                        </select>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
@@ -114,9 +123,9 @@
                     <div class="row">
                         <div class="col-md-9">
                             <div class="slider_content">
-                                <h2 class="slider_title">MixDepartment</h2>
-                                <p class="wow fadeInUp">Mix &amp; Mastering houses owned by musicians for musicians.</p>
-                                <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">Get in touch</a>
+                                <h2 class="slider_title vavilon" data-vavilon="firstSlideTitle">MixDepartment</h2>
+                                <p class="wow fadeInUp vavilon" data-vavilon="firstSlideText">Mix &amp; Mastering houses owned by musicians for musicians.</p>
+                                <a href="#contact" rel="nofollow" class="main-btn vavilon" data-vavilon="btnGetInTouch">Get in touch</a>
                             </div> <!-- slider content -->
                         </div>
                     </div> <!-- row -->
@@ -128,9 +137,9 @@
                     <div class="row">
                         <div class="col-md-9">
                             <div class="slider_content">
-                                <h2 class="slider_title">Short on time?</h2>
-                                <p class="wow fadeInUp">We deliver quickly finished products within the deadline defined by the client.</p>
-                                <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">Get in touch</a>
+                                <h2 class="slider_title vavilon" data-vavilon="secondSlideTitle">Short on time?</h2>
+                                <p class="wow fadeInUp vavilon" data-vavilon="secondSlideText">We deliver quickly finished products within the deadline defined by the client.</p>
+                                <a href="#contact" rel="nofollow" class="main-btn vavilon" data-vavilon="btnGetInTouch">Get in touch</a>
                             </div> <!-- slider content -->
                         </div>
                     </div> <!-- row -->
@@ -142,9 +151,9 @@
                     <div class="row">
                         <div class="col-md-9">
                             <div class="slider_content">
-                                <h2 class="slider_title">On a budget?</h2>
-                                <p class="wow fadeInUp">Remember that we are musicians just like you! We can offer payment plans, discounts and much more, do not hesitate to write to us to find out.</p>
-                                <a href="https://rebrand.ly/cafe-ud" rel="nofollow" class="main-btn">Get in touch</a>
+                                <h2 class="slider_title vavilon" data-vavilon="thirdSlideTitle">On a budget?</h2>
+                                <p class="wow fadeInUp vavilon" data-vavilon="thirdSlideText">Remember that we are musicians just like you! We can offer payment plans, discounts and much more, do not hesitate to write to us to find out.</p>
+                                <a href="#contact" rel="nofollow" class="main-btn vavilon" data-vavilon="btnGetInTouch">Get in touch</a>
                             </div> <!-- slider content -->
                         </div>
                     </div> <!-- row -->
@@ -155,6 +164,10 @@
         </div> <!-- header slider -->
     </section>
 
+    <!-- <button onclick="setLang('es')">esp</button>
+    <button onclick="setLang('en')">eng</button>
+    <h1 class="vavilon" data-vavilon="hello">Hello world!</h1> -->
+
     <!--====== HEADER PART ENDS ======-->
     
     <!--====== SERVICES PART START ======-->
@@ -164,7 +177,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-30">
-                        <h4 class="title">Our Services</h4>
+                        <h4 class="title" data-vavilon="servicesSectionTitel">Our Services</h4>
                         <span class="line">
                             <span class="box"></span>
                         </span>
@@ -178,8 +191,8 @@
                             <img src="assets/images/photos/IMG_3722.jpg" alt="service">
                         </div>
                         <div class="service_content">
-                            <h4 class="service_title">Mix</h4>
-                            <p>We work hard to improve and polish the customer idea. Music is first.</p>
+                            <h4 class="service_title vavilon" data-vavilon="mixTitle">Mix</h4>
+                            <p class="vavilon" data-vavilon="mixText">We work hard to improve and polish the customer idea. Music is first.</p>
                         </div>
                     </div> <!-- single service -->
                 </div>
@@ -189,8 +202,8 @@
                             <img src="assets/images/photos/EstudioLucas13.jpg" alt="service">
                         </div>
                         <div class="service_content">
-                            <h4 class="service_title">Mastering</h4>
-                            <p>We polish the music down to the last detail. No more loudness war!</p>
+                            <h4 class="service_title vavilon" data-vavilon="masteringTitle">Mastering</h4>
+                            <p class="vavilon" data-vavilon="masteringText">We polish the music down to the last detail. No more loudness war!</p>
                         </div>
                     </div> <!-- single service -->
                 </div>
@@ -200,8 +213,8 @@
                             <img src="assets/images/photos/EstudioLucas10.jpg" alt="service">
                         </div>
                         <div class="service_content">
-                            <h4 class="service_title">Production</h4>
-                            <p>With years of experience at your disposal we can help you arrange and produce your songs.</p>
+                            <h4 class="service_title vavilon" data-vavilon="productionTitle">Production</h4>
+                            <p class="vavilon" data-vavilon="productionText"></p>With years of experience at your disposal we can help you arrange and produce your songs.</p>
                         </div>
                     </div> <!-- single service -->
                 </div>
@@ -209,7 +222,7 @@
         </div> <!-- container -->
     </section>
 
-    <!--====== COFFEE PART ENDS ======-->
+    <!--====== SERVICES PART ENDS ======-->
 
     <!--====== ABOUT PART START ======-->
 
@@ -218,7 +231,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-10">
-                        <h4 class="title">Who We Are</h4>
+                        <h4 class="title vavilon" data-vavilon="whoWeAreTitle">Who We Are</h4>
                         <span class="line">
                             <span class="box"></span>
                         </span>
@@ -234,9 +247,9 @@
                             </div> <!-- about image -->
                             <div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
                                 <h4 class="about_title">Lucas Serena</h4>
-                                <p>
-                                    Lucas is a songwriter and producer, working for several well-known bands in the city of La Plata.</br> 
-                                    Its main strength is the creation of beats of urban genres.</br>
+                                <p class="vavilon" data-vavilon="bioLucas">
+                                    Lucas is a songwriter and producer, working for several well-known bands in the city of La Plata.
+                                    Its main strength is the creation of beats of urban genres.
                                     He is currently working as a Mix Engineer here in the Mix Department.
                                 </p>
                                 <ul class="social">
@@ -256,10 +269,8 @@
                             </div> <!-- about image -->
                             <div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
                                 <h4 class="about_title">Marcelo Serena</h4>
-                                <p>
-                                    Marcelo is a recognized musician producer from the city of La Plata.</br>
-                                    Having worked for renowned artists and with a very strong theoretical background (Studies studied at Berklee) </br>
-                                    he currently works as a Mastering Engineer and producer here at MixDepartment.</p>
+                                <p class="vavilon" data-vavilon="bioMarcelo">
+                                    Marcelo is a recognized musician producer from the city of La Plata. Having worked for renowned artists and with a very strong theoretical background (Berklee). He currently works as a Mastering Engineer and producer here at MixDepartment.</p>
                                 <ul class="social">
                                     <li><a href="https://www.facebook.com/marcelo.serena.73" target="_blank"><i class="lni lni-facebook-filled"></i></a></li>
                                     <li><a href="mailto:marceloserena@yahoo.com "><i class="lni lni-envelope"></i></a></li>
@@ -282,7 +293,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="section_title text-center pb-30">
-                            <h4 class="title">Get In Touch</h4>
+                            <h4 class="title vavilon" data-vavilon="getInTouchTitle">Get In Touch</h4>
                             <span class="line">
                                 <span class="box"></span>
                             </span>
@@ -296,44 +307,48 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
-                                <input class="form-control" name="name" type="text" placeholder="Name" required>
-                                <div class="valid-feedback">
+                                <label for="name" class="vavilon" data-vavilon="fNameLabel">Name</label>
+                                <input class="form-control vavilon" name="name" type="text" required>
+                                <div class="valid-feedback vavilon" data-vavilon="fValidField">
                                     Looks good!
                                 </div>
-                                <div class="invalid-feedback">
+                                <div class="invalid-feedback vavilon" data-vavilon="fInvalidField">
                                     Please write your name.
                                 </div>
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form mt-30">
-                                <input name="email" type="email" placeholder="Email" required>
-                                <div class="valid-feedback">
+                                <label for="name" class="vavilon" data-vavilon="fEmailLabel">Email</label>
+                                <input class="form-control vavilon" name="email" type="email" required>
+                                <div class="valid-feedback vavilon" data-vavilon="fValidField">
                                     Looks good!
                                 </div>
-                                <div class="invalid-feedback">
+                                <div class="invalid-feedback vavilon" data-vavilon="fInvalidField">
                                     Please write a valid email.
                                 </div>
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-12">
                             <div class="single_form mt-30">
-                                <input name="subject" type="text" placeholder="Subject" required>
-                                <div class="valid-feedback">
+                                <label for="name" class="vavilon" data-vavilon="fSubjectLabel">Subject</label>
+                                <input class="form-control vavilon" name="subject" type="text" required>
+                                <div class="valid-feedback vavilon" data-vavilon="fValidField">
                                     Looks good!
                                 </div>
-                                <div class="invalid-feedback">
+                                <div class="invalid-feedback vavilon" data-vavilon="fInvalidField">
                                     Please write a subject.
                                 </div>
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-12">
                             <div class="single_form mt-30">
-                                <textarea name="message" placeholder="Message" required></textarea>
-                                <div class="valid-feedback">
+                                <label for="name" class="vavilon" data-vavilon="fMessageLabel">Message</label>
+                                <textarea class="form-control vavilon" name="message" required></textarea>
+                                <div class="valid-feedback vavilon" data-vavilon="fValidField">
                                     Looks good!
                                 </div>
-                                <div class="invalid-feedback">
+                                <div class="invalid-feedback vavilon" data-vavilon="fInvalidField">
                                     Please write your message.
                                 </div>
                             </div> <!-- single form -->
@@ -341,7 +356,7 @@
                         <p class="form-message"></p>
                         <div class="col-lg-12">
                             <div class="single_form text-center mt-30">
-                                <button class="main-btn">SUBMIT</button>
+                                <button class="main-btn vavilon" data-vavilon="formSubmit">SUBMIT</button>
                             </div> <!-- single form -->
                         </div>
                     </div> <!-- row -->
@@ -366,10 +381,10 @@
                     <div class="col-lg-6 col-md-6 order-md-1 order-lg-1">
                         <div class="footer_about mt-45">
                             <h4 class="footer_title">MixDepartment</h4>
-                            <p>Mix &amp; Mastering houses owned by musicians for musicians.</p>
+                            <p class="vavilon" data-vavilon="footerLeftText">Mix &amp; Mastering houses owned by musicians for musicians.</p>
                         </div> <!-- footer about -->
                         <div class="footer_link mt-45">
-                            <h4 class="footer_title mb-35">Site Credits</h4>
+                            <h4 class="footer_title mb-35 vavilon" data-vavilon="footerLeftCreditsTitle">Site Credits</h4>
                             <ul>
                                 <li>
                                     <span class="text-light">Jona Cerri</span>
@@ -384,7 +399,7 @@
                     <div class="col-lg-6 order-md-6 order-lg-2">
                         <div class="footer_link_wrapper d-flex flex-wrap">
                             <div class="footer_link mt-45">
-                                <h4 class="footer_title">Let's Talk</h4>
+                                <h4 class="footer_title vavilon" data-vavilon="footerRightTitle">Let's Talk</h4>
                                 <ul>
                                     <li>
                                         <span>Lucas Serena</span>
@@ -449,6 +464,9 @@
 
     <!--====== Sweet Alert ======-->
     <script src="assets/js/sweetalert2.min.js"></script>
+
+    <!--====== Vavilon ======-->
+    <script src="assets/js/vavilon.min.js"></script>
     
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
