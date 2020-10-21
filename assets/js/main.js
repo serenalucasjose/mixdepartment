@@ -177,7 +177,66 @@ $(function() {
     });
     
     
-    //===== 
+    //===== Form
+
+    window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var form = document.getElementById('contact-form');
+        var trickyOne = document.getElementById('tricky-one');
+
+        // Loop over them and prevent submission
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          if (!form.checkValidity()) {
+            event.stopPropagation();
+          }
+          else if (trickyOne.value) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Something went wrong!'
+            });
+          }
+          else {
+            var formData = new FormData(form);
+            var body = JSON.stringify(Object.fromEntries(formData.entries()));
+
+            fetch('https://usebasin.com/f/e1fcee7e2e40.json', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body
+            })
+            .then((response) => response.json())
+            .then((data) => {
+              Swal.fire({
+                backdrop: true,
+                allowOutsideClick: false,
+                title:'Success!',
+                text:'Your email was sent, we will contact you shortly.',
+                type:'success',
+                showCancelButton: false,
+                confirmButtonText: 'OK',
+              }).then((e) => {
+                if (e.value) form.reset();
+                form.classList.remove('was-validated');
+              })
+            })
+            .catch((error) => {
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!'
+              });
+            });
+          }
+          form.classList.add('was-validated');
+        }, false);
+
+    }, false);
     
     
     
