@@ -1249,3 +1249,14 @@ p.form-message.success, p.form-message.error {
 .header_navbar.sticky #lang-switcher {
   color: black;
 }
+
+/*===== CUSTOM RESPONSIVE STYLES =====*/ 
+
+@media (max-width: 767px) {
+  .header_navbar #lang-switcher, 
+  .header_navbar.sticky #lang-switcher {
+    max-width: 145px;
+    margin: 0 0 10px;
+    color: black;
+  }
+}

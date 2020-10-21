@@ -5,10 +5,9 @@ $(function() {
     //===== Prealoder
     
     $(window).on('load', function(event) {
-      setLang('es');
+      setLang('en');
       $('.preloader').delay(500).fadeOut(500);
     });
-    
     
     //===== Sticky
 
