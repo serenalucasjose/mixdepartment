@@ -13,7 +13,7 @@
   "servicesSectionTitel": "Nuestros Servicios",
   "mixTitle": "Mezcla",
   "mixText": "Trabajamos duro para mejorar y pulir la idea del cliente. La música es lo primero.",
-  "masteringTitle": "Masterizacion",
+  "masteringTitle": "Masterización",
   "masteringText": "Pulimos la música hasta el último detalle. ¡No nos sumamos a la guerra del loudness!",
   "productionTitle": "Producción",
   "productionText": "Con años de experiencia a su disposición, podemos ayudarlo a organizar y producir sus canciones.",
@@ -30,5 +30,7 @@
   "fMessageLabel": "Mensaje",
   "footerLeftText": "Hogar de mezcla y masterización de músicos para músicos.",
   "footerLeftCreditsTitle": "Creditos de la Web",
-  "footerRightTitle": "Hablemos"
+  "footerRightTitle": "Hablemos",
+  "menuPricing": "Pricing",
+  "pricingTitle": "Precios"
 }

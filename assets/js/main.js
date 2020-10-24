@@ -6,7 +6,7 @@ $(function() {
     
     $(window).on('load', function(event) {
       setLang('en');
-      $('.preloader').delay(500).fadeOut(500);
+      $('.preloader').delay(300).fadeOut(500);
     });
     
     //===== Sticky
