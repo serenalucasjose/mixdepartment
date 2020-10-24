@@ -181,10 +181,6 @@
         </div> <!-- header slider -->
     </section>
 
-    <!-- <button onclick="setLang('es')">esp</button>
-    <button onclick="setLang('en')">eng</button>
-    <h1 class="vavilon" data-vavilon="hello">Hello world!</h1> -->
-
     <!--====== HEADER PART ENDS ======-->
     
     <!--====== SERVICES PART START ======-->
@@ -403,15 +399,15 @@
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
-            <div class="row align-items-center">
+            <div class="row align-items-stretch mt-50">
                 <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-header bg-primary text-white">
-                        Single
+                    <div class="card text-center h-100">
+                        <div class="card-header bg-primary text-white vavilon" data-vavilon="pricingSingleTitle">
+                            Single
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">One song ready for digital distribution (Mix + Mastering) </h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <h5 class="card-title vavilon" data-vavilon="pricingSingleDescription">One song ready for digital distribution (Mix + Mastering)</h5>
+                            <p class="card-text vavilon" data-vavilon="pricingSingleDetail">2 reviews</p>
                         </div>
                         <div class="card-footer text-muted">
                             70 u$s
@@ -419,13 +415,17 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card text-center shadow">
-                        <div class="card-header bg-primary text-white">
-                        EP (Up to 3 songs) - Mix Package
+                    <div class="card text-center shadow h-100">
+                        <div class="card-header bg-primary text-white vavilon" data-vavilon="pricingEpTitle">
+                            EP (Up to 3 songs) - Mix Package
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <h5 class="card-title vavilon" data-vavilon="pricingEpDescription">
+                                Three songs ready for digital distribution (Mix + Mastering)
+                            </h5>
+                            <p class="card-text vavilon" data-vavilon="pricingEpDetail">
+                                3 reviews
+                            </p>
                         </div>
                         <div class="card-footer text-muted">
                             149 u$s
@@ -433,13 +433,17 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-header bg-primary text-white">
-                        Album (Up to 10 songs) - Mix Package
+                    <div class="card text-center h-100">
+                        <div class="card-header bg-primary text-white vavilon" data-vavilon="pricingAlbumTitle">
+                            Album (Up to 10 songs) - Mix Package
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <h5 class="card-title vavilon" data-vavilon="pricingAlbumDescription">
+                                Full album ready for digital distribution (Mix + Mastering)
+                            </h5>
+                            <p class="card-text vavilon" data-vavilon="pricingAlbumDetail">
+                                3 reviews
+                            </p>
                         </div>
                         <div class="card-footer text-muted">
                             300 u$s
@@ -447,13 +451,14 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-header bg-primary text-white">
-                        Extra Song (Buying any of the mix packages) 
+                    <div class="card text-center h-100">
+                        <div class="card-header bg-primary text-white vavilon" data-vavilon="pricingExtraSongTitle">
+                            Extra Song
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text vavilon" data-vavilon="pricingExtraSongDescription">
+                                Getting any of the mix packages
+                            </p>
                         </div>
                         <div class="card-footer text-muted">
                             9 u$s
@@ -465,21 +470,6 @@
     </section>
 
     <!--====== PRICING PART ENDS ======-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     <!--====== FOOTER PART START ======-->
 
@@ -487,7 +477,7 @@
         <div class="footer_widget pt-80 pb-130">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 order-md-1 order-lg-1">
+                    <div class="col-lg-4 col-md-4">
                         <div class="footer_about mt-45">
                             <h4 class="footer_title">MixDepartment</h4>
                             <p class="vavilon" data-vavilon="footerLeftText">Mix &amp; Mastering houses owned by musicians for musicians.</p>
@@ -505,7 +495,7 @@
                             </ul>
                         </div> <!-- footer link -->
                     </div>
-                    <div class="col-lg-6 order-md-6 order-lg-2">
+                    <div class="col-lg-4 col-md-4">
                         <div class="footer_link_wrapper d-flex flex-wrap">
                             <div class="footer_link mt-45">
                                 <h4 class="footer_title vavilon" data-vavilon="footerRightTitle">Let's Talk</h4>
@@ -523,9 +513,6 @@
                                     </li>
                                     <li>
                                         <span>Marcelo Serena</span>
-                                        <!-- <a href="https://www.instagram.com/marcelo.serena/" target="_blank">
-                                            <i class="lni lni-instagram"></i>
-                                        </a>  -->
                                         /
                                         <a href="mailto:marceloserena@yahoo.com ">
                                             <i class="lni lni-envelope"></i>
@@ -534,6 +521,23 @@
                                 </ul>
                             </div> <!-- footer link -->
                         </div> <!-- footer link wrapper -->
+                    </div>
+                    <div class="col-lg-4 col-md-4 text-center">
+                        <div class="d-flex flex-wrap flex-column justify-content-center align-items-start mt-45">
+                            <h4 class="footer_title vavilon" data-vavilon="fiverr">On Fiverr?</h4>
+                            <!-- Fiverr Badge -->
+                            <div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget mt-30' style='display: inline-block;'>
+                                <a itemprop='url' href=https://www.fiverr.com/serenalucasjose rel="nofollow" target="_blank" style='display: inline-block;'>
+                                    <div class='fiverr-seller-content' id='fiverr-seller-widget-content-f8b3b18c-b46e-451c-bb61-98c60c79ac13' itemprop='contentURL' style='display: none;'></div>
+                                    <div id='fiverr-widget-seller-data' style='display: none;'>
+                                        <div itemprop='name' >serenalucasjose</div>
+                                        <div itemscope itemtype='http://schema.org/Organization'><span itemprop='name'>Fiverr</span></div>
+                                        <div itemprop='jobtitle'>Seller</div>
+                                        <div itemprop='description'>Hey there! Lucas here. I'm a producer/mixing engineer from Argentina fully equipped and ready to go! My experience is based on a long list of past work I´ve done for musicians, bands and soloists mostly. I love to provide new value on any project I'm included, work closely with the client and make the product sound as professional as possible.</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div> <!-- row -->
             </div> <!-- contact form -->
@@ -551,6 +555,9 @@
     <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
 
     <!--====== BACK TOP TOP PART ENDS ======-->
+
+    <!--====== Fiverr ======-->
+    <script id='fiverr-seller-widget-script-f8b3b18c-b46e-451c-bb61-98c60c79ac13' src='https://widgets.fiverr.com/api/v1/seller/serenalucasjose?widget_id=f8b3b18c-b46e-451c-bb61-98c60c79ac13' data-config='{"category_name":"Music \u0026 Audio"}' async='true' defer='true'></script>
 
     <!--====== Jquery js ======-->
     <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>

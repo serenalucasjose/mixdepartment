@@ -31,6 +31,18 @@
   "footerLeftText": "Hogar de mezcla y masterización de músicos para músicos.",
   "footerLeftCreditsTitle": "Creditos de la Web",
   "footerRightTitle": "Hablemos",
-  "menuPricing": "Pricing",
-  "pricingTitle": "Precios"
+  "menuPricing": "Precios",
+  "pricingTitle": "Precios",
+  "pricingSingleTitle": "Sencillo",
+  "pricingSingleDescription": "Una canción lista para distribución digital (Mezcla y Masterizacion)",
+  "pricingSingleDetail": "2 revisiones",
+  "pricingEpTitle": "EP (Hasta 3 canciones) - Paquete de Mezcla",
+  "pricingEpDescription": "Tres canciones listas para distribución digital (Mezcla y Masterizacion)",
+  "pricingEpDetail": "3 revisiones",
+  "pricingAlbumTitle": "Album (Hasta 10 canciones) - Paquete de Mezcla",
+  "pricingAlbumDescription": "Un disco completo listo para distribución digital (Mezcla y Masterizacion)",
+  "pricingAlbumDetail": "3 revisiones",
+  "pricingExtraSongTitle": "Canción extra",
+  "pricingExtraSongDescription": "Comprando cualquiera de los paquetes de mezcla",
+  "fiverr": "Encontranos en Fiverr"
 }

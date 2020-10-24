@@ -32,5 +32,17 @@
   "footerLeftCreditsTitle": "Site Credits",
   "footerRightTitle": "Let's Talk",
   "menuPricing": "Pricing",
-  "pricingTitle": "Pricing"
+  "pricingTitle": "Pricing",
+  "pricingSingleTitle": "Single",
+  "pricingSingleDescription": "One song ready for digital distribution (Mix + Mastering)",
+  "pricingSingleDetail": "2 reviews",
+  "pricingEpTitle": "EP (Up to 3 songs) - Mix Package",
+  "pricingEpDescription": "Three songs ready for digital distribution (Mix + Mastering)",
+  "pricingEpDetail": "3 reviews",
+  "pricingAlbumTitle": "Album (Up to 10 songs) - Mix Package",
+  "pricingAlbumDescription": "Full album ready for digital distribution (Mix + Mastering)",
+  "pricingAlbumDetail": "3 reviews",
+  "pricingExtraSongTitle": "Extra Song",
+  "pricingExtraSongDescription": "Getting any of the mix packages",
+  "fiverr": "On Fiverr?"
 }
