@@ -1260,6 +1260,7 @@ p.form-message.success, p.form-message.error {
 
 .header_navbar.sticky #lang-switcher {
   color: black;
+  margin: 18px 0;
 }
 
 /*===== CUSTOM RESPONSIVE STYLES =====*/ 
