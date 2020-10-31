@@ -1,248 +1,232 @@
-$(function() {
-    
-    "use strict";
-    
-    //===== Prealoder
-    
-    $(window).on('load', function(event) {
-      setLang('en');
-      $('.preloader').fadeOut(100);
-    });
-    
-    //===== Sticky
+$(function () {
 
-    $(window).on('scroll', function (event) {
-        var scroll = $(window).scrollTop();
-        if (scroll < 20) {
-            $(".header_navbar").removeClass("sticky");
-        } else {
-            $(".header_navbar").addClass("sticky");
-        }
-    });
-    
-    
-    //===== Section Menu Active
+  "use strict";
 
-    var scrollLink = $('.page-scroll');
-    // Active link switching
-    $(window).scroll(function () {
-        var scrollbarLocation = $(this).scrollTop();
+  //===== Prealoder
 
-        scrollLink.each(function () {
+  $(window).on('load', function (event) {
+    setLang('en');
+    $('.preloader').fadeOut(100);
+  });
 
-            var sectionOffset = $(this.hash).offset().top - 73;
+  //===== Sticky
 
-            if (sectionOffset <= scrollbarLocation) {
-                $(this).parent().addClass('active');
-                $(this).parent().siblings().removeClass('active');
-            }
-        });
-    });
-    
-    //===== close navbar-collapse when a  clicked
-
-    $(".navbar-nav a").on('click', function () {
-        $(".navbar-collapse").removeClass("show");
-    });
-
-    $(".navbar-toggler").on('click', function () {
-        $(this).toggleClass("active");
-    });
-
-    $(".navbar-nav a").on('click', function () {
-        $(".navbar-toggler").removeClass('active');
-    });
-    
-    
-    //===== Slick Slider
-
-    function mainSlider() {
-        var BasicSlider = $('.slider-active');
-        BasicSlider.on('init', function (e, slick) {
-            var $firstAnimatingElements = $('.single_slider:first-child').find('[data-animation]');
-            doAnimations($firstAnimatingElements);
-        });
-        BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
-            var $animatingElements = $('.single_slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
-            doAnimations($animatingElements);
-        });
-        BasicSlider.slick({
-            autoplay: true,
-            autoplaySpeed: 6000,
-            dots: true,
-            fade: true,
-            arrows: false,
-            responsive: [
-                {
-                    breakpoint: 767,
-                    settings: {
-                        arrows: false
-                    }
-                }
-            ]
-        });
-
-        function doAnimations(elements) {
-            var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-            elements.each(function () {
-                var $this = $(this);
-                var $animationDelay = $this.data('delay');
-                var $animationType = 'animated ' + $this.data('animation');
-                $this.css({
-                    'animation-delay': $animationDelay,
-                    '-webkit-animation-delay': $animationDelay
-                });
-                $this.addClass($animationType).one(animationEndEvents, function () {
-                    $this.removeClass($animationType);
-                });
-            });
-        }
+  $(window).on('scroll', function (event) {
+    var scroll = $(window).scrollTop();
+    if (scroll < 20) {
+      $(".header_navbar").removeClass("sticky");
+    } else {
+      $(".header_navbar").addClass("sticky");
     }
-    mainSlider();
-    
-    
-    
-    //=====  Slick Customer
-    
-    $('.customer_active').slick({
-        dots: true,
-        infinite: true,
-        speed: 800,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: false,
-//        prevArrow: '<span class="prev"><i class="lni lni-chevron-left"></i></span>',
-//        nextArrow: '<span class="next"><i class="lni lni-chevron-right"></i></span>',
-        responsive: [
-            {
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: 2,
-              }
-            },
-            {
-              breakpoint: 992,
-              settings: {
-                slidesToShow: 1,
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1,
-              }
-            },
-            {
-              breakpoint: 576,
-              settings: {
-                slidesToShow: 1,
-              }
-            }
-        ]
-    });
-    
-    
-    //=====  Slick Customer
-    
+  });
 
-    
-    //=====  WOW active
-    
-    var wow = new WOW({
-        boxClass: 'wow', //
-        mobile: false, // 
-    })
-    wow.init();
-    
-    
-    //===== Back to top
-    
-    // Show or hide the sticky footer button
-    $(window).on('scroll', function(event) {
-        if($(this).scrollTop() > 600){
-            $('.back-to-top').fadeIn(200)
-        } else{
-            $('.back-to-top').fadeOut(200)
+
+  //===== Section Menu Active
+
+  var scrollLink = $('.page-scroll');
+  // Active link switching
+  $(window).scroll(function () {
+    var scrollbarLocation = $(this).scrollTop();
+
+    scrollLink.each(function () {
+
+      var sectionOffset = $(this.hash).offset().top - 73;
+
+      if (sectionOffset <= scrollbarLocation) {
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+      }
+    });
+  });
+
+  //===== close navbar-collapse when a  clicked
+
+  $(".navbar-nav a").on('click', function () {
+    $(".navbar-collapse").removeClass("show");
+  });
+
+  $(".navbar-toggler").on('click', function () {
+    $(this).toggleClass("active");
+  });
+
+  $(".navbar-nav a").on('click', function () {
+    $(".navbar-toggler").removeClass('active');
+  });
+
+
+  //===== Slick Slider
+
+  function mainSlider() {
+    var BasicSlider = $('.slider-active');
+    BasicSlider.on('init', function (e, slick) {
+      var $firstAnimatingElements = $('.single_slider:first-child').find('[data-animation]');
+      doAnimations($firstAnimatingElements);
+    });
+    BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
+      var $animatingElements = $('.single_slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+      doAnimations($animatingElements);
+    });
+    BasicSlider.slick({
+      autoplay: true,
+      autoplaySpeed: 6000,
+      dots: true,
+      fade: true,
+      arrows: false,
+      responsive: [{
+        breakpoint: 767,
+        settings: {
+          arrows: false
         }
+      }]
     });
-    
-    
-    //Animate the scroll to yop
-    $('.back-to-top').on('click', function(event) {
-        event.preventDefault();
-        
-        $('html, body').animate({
-            scrollTop: 0,
-        }, 1500);
-    });
-    
-    
-    //===== Form
 
-    window.addEventListener('load', function() {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var form = document.getElementById('contact-form');
-        var trickyOne = document.getElementById('tricky-one');
+    function doAnimations(elements) {
+      var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+      elements.each(function () {
+        var $this = $(this);
+        var $animationDelay = $this.data('delay');
+        var $animationType = 'animated ' + $this.data('animation');
+        $this.css({
+          'animation-delay': $animationDelay,
+          '-webkit-animation-delay': $animationDelay
+        });
+        $this.addClass($animationType).one(animationEndEvents, function () {
+          $this.removeClass($animationType);
+        });
+      });
+    }
+  }
+  mainSlider();
 
-        // Loop over them and prevent submission
-        form.addEventListener('submit', function(event) {
-          event.preventDefault();
 
-          if (!form.checkValidity()) {
-            event.stopPropagation();
-          }
-          else if (trickyOne.value) {
+
+  //=====  Slick Customer
+
+  $('.customer_active').slick({
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: false,
+    //        prevArrow: '<span class="prev"><i class="lni lni-chevron-left"></i></span>',
+    //        nextArrow: '<span class="next"><i class="lni lni-chevron-right"></i></span>',
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
+
+
+  //=====  Slick Customer    
+
+  //===== Back to top
+
+  // Show or hide the sticky footer button
+  $(window).on('scroll', function (event) {
+    if ($(this).scrollTop() > 600) {
+      $('.back-to-top').fadeIn(200)
+    } else {
+      $('.back-to-top').fadeOut(200)
+    }
+  });
+
+
+  //Animate the scroll to yop
+  $('.back-to-top').on('click', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: 0,
+    }, 1500);
+  });
+
+
+  //===== Form
+
+  window.addEventListener('load', function () {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var form = document.getElementById('contact-form');
+    var trickyOne = document.getElementById('tricky-one');
+
+    // Loop over them and prevent submission
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        event.stopPropagation();
+      } else if (trickyOne.value) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!'
+        });
+      } else {
+        var formData = new FormData(form);
+        var body = JSON.stringify(Object.fromEntries(formData.entries()));
+
+        fetch('https://usebasin.com/f/e1fcee7e2e40.json', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body
+          })
+          .then((response) => response.json())
+          .then((data) => {
+            Swal.fire({
+              backdrop: true,
+              allowOutsideClick: false,
+              title: 'Success!',
+              text: 'Your email was sent, we will contact you shortly.',
+              type: 'success',
+              showCancelButton: false,
+              confirmButtonText: 'OK',
+            }).then((e) => {
+              if (e.value) form.reset();
+              form.classList.remove('was-validated');
+            })
+          })
+          .catch((error) => {
             Swal.fire({
               icon: 'error',
               title: 'Oops...',
               text: 'Something went wrong!'
             });
-          }
-          else {
-            var formData = new FormData(form);
-            var body = JSON.stringify(Object.fromEntries(formData.entries()));
-
-            fetch('https://usebasin.com/f/e1fcee7e2e40.json', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-              },
-              body
-            })
-            .then((response) => response.json())
-            .then((data) => {
-              Swal.fire({
-                backdrop: true,
-                allowOutsideClick: false,
-                title:'Success!',
-                text:'Your email was sent, we will contact you shortly.',
-                type:'success',
-                showCancelButton: false,
-                confirmButtonText: 'OK',
-              }).then((e) => {
-                if (e.value) form.reset();
-                form.classList.remove('was-validated');
-              })
-            })
-            .catch((error) => {
-              Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Something went wrong!'
-              });
-            });
-          }
-          form.classList.add('was-validated');
-        }, false);
-
+          });
+      }
+      form.classList.add('was-validated');
     }, false);
-    
-    
+
+  }, false);
+
+
   //===== Lang Switcher
   var langSwitcher = document.getElementById("lang-switcher");
   langSwitcher.addEventListener("change", () => {
     setLang(langSwitcher.value);
   });
-    
+
 });
